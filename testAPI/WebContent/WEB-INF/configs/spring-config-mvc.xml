@@ -26,7 +26,9 @@
 	<context:component-scan
 		base-package="poly.controller" />
 	
-
+<mvc:interceptors>
+        <bean class="interceptor.MenuHandleInterceptor"></bean>
+    </mvc:interceptors>
 	<bean id="multipartResolver"
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 		<!-- maxUploadSize=20MB -->
